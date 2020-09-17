@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
-import { Container } from './syles';
+import { Container } from './styles';
 
 type ButtonsProps = ButtonHTMLAttributes<HTMLButtonElement>;
 

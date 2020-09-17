@@ -24,10 +24,6 @@ export const Container = styled.div`
     &::placeholder {
       color: #666360;
     }
-
-    & + input {
-      margin-top: 8px;
-    }
   }
 
   svg {

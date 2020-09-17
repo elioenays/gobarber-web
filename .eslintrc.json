@@ -25,7 +25,9 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "no-restricted-globals": ["error", "event", "fdescribe"],
     "react/jsx-props-no-spreading": "off",
+    "no-console": "off",
     "prettier/prettier": "error",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
