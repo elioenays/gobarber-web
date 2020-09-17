@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import { FiArrowLeft, FiLock, FiMail, FiUser } from "react-icons/fi";
+import { FiArrowLeft, FiLock, FiMail, FiUser } from 'react-icons/fi';
 
-import { Form } from "@unform/web";
+import { Form } from '@unform/web';
 
-import { Container, Content, Background } from "./styles";
+import { Container, Content, Background } from './styles';
 
-import logoImg from "../../assets/logo.svg";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
+import logoImg from '../../assets/logo.svg';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 const SignUp: React.FC = () => {
   function handleSubmit(data: object): void {
