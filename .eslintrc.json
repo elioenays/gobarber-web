@@ -29,6 +29,7 @@
     "react/jsx-props-no-spreading": "off",
     "no-console": "off",
     "prettier/prettier": "error",
+    "no-unused-expressions": "off",
     "react/prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
