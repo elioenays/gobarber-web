@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 
-import { FiLink2, FiLock, FiLogIn, FiMail } from 'react-icons/fi';
+import { FiLock, FiLogIn, FiMail } from 'react-icons/fi';
 
 import { Form } from '@unform/web';
 
@@ -53,6 +53,8 @@ const SignIn: React.FC = () => {
           const errors = getValidationErrors(err);
 
           formRef.current?.setErrors(errors);
+
+          return;
         }
 
         addToast({
