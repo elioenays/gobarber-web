@@ -23,7 +23,7 @@ export const AuthContext = createContext<AuthContextData>(
 export const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem('@Gobabrber:token');
-    const user = localStorage.getItem('@Gobabrber:token');
+    const user = localStorage.getItem('@Gobabrber:user');
 
     if (token && user) {
       return { token, user: JSON.parse(user) };
