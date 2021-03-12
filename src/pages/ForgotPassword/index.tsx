@@ -43,14 +43,15 @@ const ForgotPassword: React.FC = () => {
 
         await schema.validate(data, { abortEarly: false });
 
-        // Recuperação de Senha - API
-        await api.post('/password/fogot', {
+        // recuperação de senha
+
+        await api.post('/password/forgot', {
           email: data.email,
         });
 
         addToast({
           type: 'success',
-          title: 'Email de recuperação enviado',
+          title: 'E-mail de recuperação enviado',
           desciption:
             'Enviamos um e-mail para confirmar a recuperação de senha, cheque sua caixa de entrada',
         });
@@ -89,7 +90,7 @@ const ForgotPassword: React.FC = () => {
               Recuperar
             </Button>
           </Form>
-          <Link to="/">
+          <Link to="/signin">
             <FiLogIn />
             Voltar ao Login
           </Link>
