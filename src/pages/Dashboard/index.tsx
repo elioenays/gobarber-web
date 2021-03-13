@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiClock, FiPower } from 'react-icons/fi';
 import {
   Container,
@@ -9,12 +9,16 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
 } from './styles';
 
 import logoimg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   const { signOut, user } = useAuth();
   return (
     <Container>
@@ -57,6 +61,51 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+          <Section>
+            <strong>Manhã</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/16818069?s=460&u=2c1f8c01eeb830659fba25f639effed6d0796598&v=4"
+                  alt="Elioenay Silva"
+                />
+                <strong>Elioenay Silva</strong>
+              </div>
+            </Appointment>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/16818069?s=460&u=2c1f8c01eeb830659fba25f639effed6d0796598&v=4"
+                  alt="Elioenay Silva"
+                />
+                <strong>Elioenay Silva</strong>
+              </div>
+            </Appointment>
+          </Section>
+          <Section>
+            <strong>Tarde</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                14:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars.githubusercontent.com/u/16818069?s=460&u=2c1f8c01eeb830659fba25f639effed6d0796598&v=4"
+                  alt="Elioenay Silva"
+                />
+                <strong>Elioenay Silva</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
