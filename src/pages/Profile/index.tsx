@@ -21,7 +21,9 @@ import { useAuth } from '../../hooks/auth';
 interface ProfileFormData {
   name: string;
   email: string;
+  old_password: string;
   password: string;
+  password_confirmation: string;
 }
 
 const Profile: React.FC = () => {
@@ -43,6 +45,7 @@ const Profile: React.FC = () => {
           email: Yup.string()
             .required('E-mail obrigatório')
             .email('Digite um e-mail válido'),
+          old_password: Yup.string(),
           password: Yup.string().min(6, 'No mínimo 6 dígitos'),
           password_confirmation: Yup.string().oneOf(
             [Yup.ref('password')],
