@@ -35,13 +35,13 @@ const Toast: React.FC<ToastProps> = ({ message, style }) => {
   return (
     <Container
       type={message.type}
-      hasDescription={Number(!!message.desciption)}
+      hasDescription={Number(!!message.description)}
       style={style}
     >
       {icons[message.type || 'info']}
       <div>
         <strong>{message.title}</strong>
-        <p>{message.desciption && <p>{message.desciption}</p>}</p>
+        <p>{message.description && <p>{message.description}</p>}</p>
       </div>
 
       <button onClick={() => removeToast(message.id)} type="button">

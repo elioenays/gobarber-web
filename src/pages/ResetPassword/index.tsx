@@ -74,7 +74,7 @@ const ResetPassword: React.FC = () => {
         addToast({
           type: 'info',
           title: 'Erro ao resetar senha',
-          desciption: 'Ocorreu um erro ao resetar sua senha, tente novamente.',
+          description: 'Ocorreu um erro ao resetar sua senha, tente novamente.',
         });
       }
     },

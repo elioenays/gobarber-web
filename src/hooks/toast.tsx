@@ -6,7 +6,7 @@ export interface ToastMessage {
   id: string;
   type?: 'success' | 'error' | 'info';
   title: string;
-  desciption?: string;
+  description?: string;
 }
 
 interface ToastContextData {
@@ -20,14 +20,14 @@ export const ToastProvider: React.FC = ({ children }) => {
   const [messages, setMessages] = useState<ToastMessage[]>([]);
 
   const addToast = useCallback(
-    ({ type, title, desciption }: Omit<ToastMessage, 'id'>) => {
+    ({ type, title, description }: Omit<ToastMessage, 'id'>) => {
       const id = uuid();
 
       const toast = {
         id,
         type,
         title,
-        desciption,
+        description,
       };
 
       setMessages(oldMessages => [...oldMessages, toast]);
